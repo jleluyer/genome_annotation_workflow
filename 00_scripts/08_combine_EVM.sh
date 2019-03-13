@@ -8,8 +8,8 @@
 cd $PBS_O_WORKDIR
 
 
-GENOME="/home1/datawork/jleluyer/01_projects/genome_augustus/01_info_files/sspace.final.scaffolds.fasta"
-WEIGHT="/home1/datawork/jleluyer/01_projects/genome_augustus/01_info_files/weight.txt"
+GENOME="1_info_files/sspace.final.scaffolds.fasta"
+WEIGHT="01_info_files/weight.txt"
 OUTPUT="EVM_output.txt"
 GENOME_NAME="sspace.final.scaffolds.fasta"
 

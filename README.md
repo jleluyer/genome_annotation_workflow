@@ -1,2 +1,2 @@
 # genome_annotation_workflow
-Genome annotation with Augustus + Gawn 
+Compilation of tools for genome annotation 

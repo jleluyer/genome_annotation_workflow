@@ -1,0 +1,8 @@
+#!/bin/bash
+#PBS -N EVM
+#PBS -o 98_log_files/log-commands.EVM.out
+#PBS -l walltime=24:00:00
+#PBS -l mem=150g
+#PBS -r n
+
+cd $PBS_O_WORKDIR

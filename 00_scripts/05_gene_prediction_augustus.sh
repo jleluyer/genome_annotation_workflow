@@ -16,19 +16,15 @@ TMP="04_temp_results"
 
 # Mapping RNA-seq
 # Merging bam files
+# Prepare hints
+# train augustus
 
 #Load module
 source activate Augus
 
-
-
-# Correct manual entries
-#sed -i -e 's/src=X/src=M/g' -e 's/src=E/src=M/g' 02_data/hints.mrna.gff
-
 # Predict using hints 
 
-augustus --hintsfile=02_data/hints.mrna.gff --species=oyster $GENOME > "$OUTPUTFOLDER"/augustus.mrna.out
-
+augustus --hintsfile=02_data/hints.mrna.gff --species=P_marg $GENOME > "$TMP"/augustus.mrna.out
 
 # Compile results
 grep "AUGUSTUS" "$TMP"/augustus.mrna.out > "$OUTPUTFOLDER"/augustus.mrna.gff

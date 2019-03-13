@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -N EVM
-#PBS -o 98_log_files/log-partition_EVM.out
+#PBS -o 98_log_files/log-prep_commands.EVM.out
 #PBS -l walltime=12:00:00
 #PBS -l mem=5g
 #PBS -r n
@@ -23,5 +23,4 @@ write_EVM_commands.pl --genome "$GENOME" --weights "$WEIGHT" \
       --gene_predictions denovo.test.gff3 --protein_alignments homology.test.gff3 \
       --transcript_alignments transcript.test.gff3 \
       --output_file_name "$OUTPUT" --partitions partitions_list.out >commands.list
-
 

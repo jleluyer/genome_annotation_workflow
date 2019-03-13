@@ -7,7 +7,7 @@
 
 
 # Global variables
-GENOME="/home/datawork-rmpf/p_margaritifera/genome/annotation/01_reference/sspace.final.scaffolds.fasta"
+GENOME="sspace.final.scaffolds.fasta"
 
 
 ~/softwares/gm_et_linux_64/gmes_petap/gmes_petap.pl --prediction --max_gap 1000 --sequence "$GENOME"

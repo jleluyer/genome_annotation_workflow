@@ -15,6 +15,6 @@ GENOME_NAME="sspace.final.scaffolds.fasta"
 
 
 # combine evidence modeler
-~/softwares/EVidenceModeler/EvmUtils/recombine_EVM_partial_outputs.pl --partitions partitions_list.out --output_file_name EVM_output.txt
+~/softwares/EVidenceModeler/EvmUtils/recombine_EVM_partial_outputs.pl --partitions partitions_list.out --output_file_name "$OUTPUT"
 
-~/softwares/EVidenceModeler/EvmUtils/convert_EVM_outputs_to_GFF3.pl  --partitions partitions_list.out --output EVM_output.txt  --genome sspace.final.scaffolds.fasta
+~/softwares/EVidenceModeler/EvmUtils/convert_EVM_outputs_to_GFF3.pl  --partitions partitions_list.out --output "$OUTPUT" --genome "$GENOMENAME"

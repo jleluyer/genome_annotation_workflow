@@ -7,3 +7,11 @@ info/
 data/
 perform.txt
 tmp*
+01_info_files/full_length_acc.*
+04_temp_results/transcriptome.univecclean.fa
+cleaning_*/
+*log
+*.sort
+*.pep
+*.cidx
+*.cln

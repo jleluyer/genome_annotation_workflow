@@ -8,7 +8,7 @@
 
 cd $PBS_O_WORKDIR
 
-UNIREF50="/home/ref-bioinfo/beedeem/p/Uniprot_Uniref50/current/Uniprot_Uniref50/uniref50.fasta"
+UNIREF50="uniref50.fasta"
 
 # split Uniref50 in 1000 entries files
 

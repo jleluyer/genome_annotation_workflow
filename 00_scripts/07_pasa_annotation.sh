@@ -4,28 +4,26 @@
 #PBS -l walltime=20:00:00
 #PBS -l mem=40g
 #PBS -q omp
-#PBS -l ncpus=8
+#PBS -l ncpus=16
 #PBS -r n
 
 cd $PBS_O_WORKDIR
 
 # Variables
-TRANSCRIPTOME="transcriptome.final.fa"
+TRANSCRIPTOME="02_data/transcriptome.final.fa"
 UNIVEC="/home1/datawork/jleluyer/00_ressources/univec/univec.fasta"
 GENOME="01_info_files/sspace.final.scaffolds.fasta"
-SEQOUT="04_temp_results/transcriptome.univecclean.fa"
 FULLCDNA="01_info_files/full_length_acc.txt"
 NCPU=8
-CONFIGFILE=""
+CONFIGFILE="01_info_files/alignAssembly.config"
+TRANSCRIPTOMECLN="02_data/transcriptome.final.fa.clean"
 
 # cLean trancriptome sequences
-#seqclean $TRANSCRIPTOME -v $UNIVEC -o "$SEQOUT" -c 8
+#seqclean $TRANSCRIPTOME -v $UNIVEC -c 8
 
 source activate PASA
 
-# Annotate with gmap and blat
-Launch_PASA_pipeline.pl \
-           -c $CONFIGFILE -C -R -g $GENOME \
-           -t $SEQOUT -T -u $TRANSCRIPTOME \
-           -f $FULLCDNA --ALIGNERS blat,gmap --CPU $NCPU
+# annotate genome
+~/anaconda2/envs/PASA/opt/pasa-2.3.3/Launch_PASA_pipeline.pl -c $CONFIGFILE -C -R \
+	-g $GENOME -f $FULLCDNA -t $TRANSCRIPTOMECLN -T -u $TRANSCRIPTOME --ALIGNERS gmap,blat --CPU $NCPU
 

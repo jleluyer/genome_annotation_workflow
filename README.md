@@ -7,5 +7,5 @@ Augustus
 Exonerate
 EVidenceModeller
 GenBlast
-GenMark
+GeneMark
 PASA
